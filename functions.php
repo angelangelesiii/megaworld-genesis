@@ -44,7 +44,8 @@ if ( ! function_exists( 'megaworld_genesis_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'megaworld-genesis' ),
+			'header-menu' => esc_html__( 'Header', 'megaworld-genesis' ),
+			'footer-menu' => esc_html__( 'Header', 'megaworld-genesis' )
 		) );
 
 		/*
@@ -120,8 +121,19 @@ add_action( 'widgets_init', 'megaworld_genesis_widgets_init' );
  * Enqueue scripts and styles.
  */
 function megaworld_genesis_scripts() {
+
 	wp_enqueue_style( 'megaworld-genesis-style', get_stylesheet_uri() );
 
+	// MAIN STYLESHEET
+	wp_enqueue_style( 'css-main', get_template_directory_uri().'/css/main.css');
+
+	// FRONT PAGE STYLESHEET
+	if(is_front_page()) wp_enqueue_style( 'css-front', get_template_directory_uri().'/css/front.css');
+
+
+
+	// =====================================
+	// SCRIPTS
 	wp_enqueue_script( 'megaworld-genesis-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'megaworld-genesis-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
