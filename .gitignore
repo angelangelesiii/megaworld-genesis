@@ -8,5 +8,7 @@
 ehthumbs.db
 Thumbs.db
 
+package-lock.json
+
 /.sass-cache
 /node_modules
