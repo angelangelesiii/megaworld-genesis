@@ -1,0 +1,22 @@
+
+
+@import "compass/support";
+// @import "compass/css3";
+
+$graceful-usage-threshold : 0.1;
+// $debug-browser-support: true;
+
+
+/* sample comment */
+.image-item {
+    .container {
+        background-color: #333;
+        transition: all 0.2s ease;
+        background: linear-gradient(red, blue);
+    }
+    h1 {
+        font-family: serif;
+        opacity: 0.1;
+        box-shadow: 5px 5px 30px #000;
+    }
+}
