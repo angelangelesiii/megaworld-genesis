@@ -30,7 +30,7 @@ add_import_path "node_modules/foundation-sites/scss"
 require 'fileutils'
 on_stylesheet_saved do |file|
   if File.exists?(file) && File.basename(file) == "style.css"
-    puts "    (WordPress specific) Moving: #{file} ###"
+    #puts "    (WordPress specific) Moving: #{file} ###"
     FileUtils.mv(file, File.dirname(file) + "/../" + File.basename(file))
   end
 end

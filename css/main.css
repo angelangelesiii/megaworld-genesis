@@ -1,12 +1,15 @@
-/* sample comment */
-.image-item .container {
-  background-color: #333;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(red), to(blue));
-  background: linear-gradient(red, blue); }
-.image-item h1 {
-  font-family: serif;
-  opacity: 0.1;
-  -webkit-box-shadow: 5px 5px 30px #000;
-          box-shadow: 5px 5px 30px #000; }
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+/* Coolors Exported Palette - coolors.co/f06449-ede6e3-dadad9-36382e-5bc3eb */
+/* RGB */
+#siteheader {
+  background-color: #5bc3eb;
+  color: #ede6e3; }
+  #siteheader .logo-container {
+    line-height: 64px; }
+    #siteheader .logo-container img {
+      display: inline;
+      max-height: 48px; }
+  #siteheader .menu-container .sample {
+    line-height: 64px; }

@@ -22,37 +22,29 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'megaworld-genesis' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$megaworld_genesis_description = get_bloginfo( 'description', 'display' );
-			if ( $megaworld_genesis_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $megaworld_genesis_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<?php // additional header classes
+	$headerClasses = get_post_type( $post->ID );
+	if (is_front_page()) $headerClasses .= ' front-page hit-top';
+	if (is_home()) $headerClasses .= 'blog';
+	?>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'megaworld-genesis' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<header id="siteheader" class="site-header <?php echo $headerClasses; ?>">
+		<nav id="sitenav" class="main-site-navigation">
+			<div class="wrapper-big">
+				<div class="nav-container grid-x">
+					<div class="logo-container cell shrink">
+						<img src="<?php echo get_template_directory_uri().'/images/logos/mw_logo_white.png' ?>" alt="Megaworld">
+					</div>
+					<div class="menu-container cell auto">
+						<span class="sample">
+							Hello World
+						</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
 
+	<!-- START SITE CONTENT -->
 	<div id="content" class="site-content">

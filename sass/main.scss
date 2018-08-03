@@ -1,22 +1,35 @@
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+// Colors
+@import "colors/colors1";
+
+// Variables
+$headerHeightMain: 64px;
+$headerHeightMobile: 52px;
+
+// --------------------------
 
 
-@import "compass/support";
-// @import "compass/css3";
+// Start here
 
-$graceful-usage-threshold : 0.1;
-// $debug-browser-support: true;
+#siteheader {
+    background-color: $primary;
+    color: $white;
 
+    .logo-container {
+        line-height: 64px;
 
-/* sample comment */
-.image-item {
-    .container {
-        background-color: #333;
-        transition: all 0.2s ease;
-        background: linear-gradient(red, blue);
+        img {
+            display: inline;
+            max-height: 48px;
+        }
     }
-    h1 {
-        font-family: serif;
-        opacity: 0.1;
-        box-shadow: 5px 5px 30px #000;
+
+    .menu-container {
+
+        .sample {
+            line-height: 64px;
+        }
     }
 }

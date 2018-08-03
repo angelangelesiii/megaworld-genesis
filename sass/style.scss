@@ -73,3 +73,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 // Grid
 @include foundation-xy-grid-classes;
+
+
+/*--------------------------------------------------------------
+# Wrappers
+--------------------------------------------------------------*/
+
+@mixin max-width-center($max-width) {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+.wrapper-big {
+	@include max-width-center(1360px);
+	padding: 0 15px;
+}
+.wrapper-medium {
+	@include max-width-center(1120);
+	padding: 0 15px;
+}
+.wrapper-small {
+	@include max-width-center(910);
+	padding: 0 15px;
+}
+
