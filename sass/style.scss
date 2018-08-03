@@ -46,12 +46,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+@import "colors/colors1";
+// color codes:
+// primary
+// secondary
+// white
+// lightgray
+// black
+// linkcolor
+
+/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
 
 /*--------------------------------------------------------------
-# Typography
+# Foundation 6
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "settings";
+@import "foundation";
 
+@include foundation-typography;
+@include foundation-forms;
+
+// Grid
+@include foundation-xy-grid-classes;

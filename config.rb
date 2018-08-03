@@ -11,6 +11,8 @@ javascripts_dir = "javascripts"
 # You can select your preferred output style here (can be overridden via the command line):
 output_style = :expanded
 
+add_import_path "node_modules/foundation-sites/scss"
+
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
