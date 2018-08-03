@@ -31,7 +31,7 @@
 
 	<header id="siteheader" class="site-header <?php echo $headerClasses; ?>">
 		<nav id="sitenav" class="main-site-navigation">
-			<div class="wrapper-big">
+			<div class="wrapper-medium">
 				<div class="nav-container grid-x">
 					<div class="logo-container cell shrink">
 						<img src="<?php echo get_template_directory_uri().'/images/logos/mw_logo_white.png' ?>" alt="Megaworld">

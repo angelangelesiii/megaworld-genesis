@@ -90,11 +90,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	padding: 0 15px;
 }
 .wrapper-medium {
-	@include max-width-center(1120);
+	@include max-width-center(1120px);
 	padding: 0 15px;
 }
 .wrapper-small {
-	@include max-width-center(910);
+	@include max-width-center(910px);
 	padding: 0 15px;
 }
 

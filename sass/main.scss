@@ -1,35 +1,26 @@
 /*--------------------------------------------------------------
-# Main
+# Init
 --------------------------------------------------------------*/
+
 // Colors
 @import "colors/colors1";
 
-// Variables
+// VARIABLES
+// =================
+
+// header
 $headerHeightMain: 64px;
 $headerHeightMobile: 52px;
+$logoHeightMain:48px;
+$logoHeightMobile: 38px;
 
 // --------------------------
 
 
 // Start here
 
-#siteheader {
-    background-color: $primary;
-    color: $white;
-
-    .logo-container {
-        line-height: 64px;
-
-        img {
-            display: inline;
-            max-height: 48px;
-        }
-    }
-
-    .menu-container {
-
-        .sample {
-            line-height: 64px;
-        }
-    }
+body {
+    background-color: $purewhite;
 }
+
+@import "modules/header";

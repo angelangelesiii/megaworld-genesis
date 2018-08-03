@@ -2469,12 +2469,12 @@ select {
 
 .wrapper-medium {
   width: 100%;
-  max-width: 1120;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 15px; }
 
 .wrapper-small {
   width: 100%;
-  max-width: 910;
+  max-width: 910px;
   margin: 0 auto;
   padding: 0 15px; }

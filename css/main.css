@@ -1,15 +1,17 @@
 /*--------------------------------------------------------------
-# Main
+# Init
 --------------------------------------------------------------*/
 /* Coolors Exported Palette - coolors.co/f06449-ede6e3-dadad9-36382e-5bc3eb */
 /* RGB */
+body {
+  background-color: #FFFFFF; }
+
 #siteheader {
   background-color: #5bc3eb;
   color: #ede6e3; }
-  #siteheader .logo-container {
-    line-height: 64px; }
-    #siteheader .logo-container img {
-      display: inline;
-      max-height: 48px; }
+  #siteheader .logo-container img {
+    display: inline-block;
+    max-height: 48px;
+    margin-top: 8px; }
   #siteheader .menu-container .sample {
     line-height: 64px; }

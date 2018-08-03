@@ -1,0 +1,21 @@
+
+#siteheader {
+    background-color: $primary;
+    color: $white;
+
+    .logo-container {
+
+        img {
+            display: inline-block;
+            max-height: $logoHeightMain;
+            margin-top: (($headerHeightMain -$logoHeightMain)/2);
+        }
+    }
+
+    .menu-container {
+
+        .sample {
+            line-height: 64px;
+        }
+    }
+}
