@@ -47,11 +47,14 @@ ul#menu-header-menu {
   ul#menu-header-menu > li.menu-item {
     display: inline-block;
     position: relative; }
-    #menu-header-menu > li.menu-item.menu-item-has-children::after,
-    ul#menu-header-menu > li.menu-item.menu-item-has-children::after {
+    #menu-header-menu > li.menu-item.menu-item-has-children a::after,
+    ul#menu-header-menu > li.menu-item.menu-item-has-children a::after {
       content: '\f0d7';
+      font-family: FontAwesome;
       line-height: 64px;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      display: inline;
+      margin-left: 5px; }
     #menu-header-menu > li.menu-item a,
     ul#menu-header-menu > li.menu-item a {
       display: block;

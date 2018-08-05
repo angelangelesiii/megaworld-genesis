@@ -55,10 +55,14 @@ ul#menu-header-menu {
         display: inline-block;
         position: relative;
 
-        &.menu-item-has-children::after {
+        
+        &.menu-item-has-children a::after {
             content: '\f0d7';
+            font-family: FontAwesome;
             line-height: $headerHeightMain;
             color: $purewhite;
+            display: inline;
+            margin-left: 5px;
         }
 
         a {
