@@ -63,8 +63,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "normalize";
 
 /*--------------------------------------------------------------
+# Font Family
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i,800,800i|Libre+Franklin:200,400,700,900');
+// Sans Serif: Libre Franklin
+// Serif: EB Garamond
+
+/*--------------------------------------------------------------
 # Foundation 6
 --------------------------------------------------------------*/
+@import "font-variables";
 @import "settings";
 @import "foundation";
 

@@ -33,14 +33,28 @@
 		<nav id="sitenav" class="main-site-navigation">
 			<div class="wrapper-medium">
 				<div class="nav-container grid-x">
+
 					<div class="logo-container cell shrink">
 						<img src="<?php echo get_template_directory_uri().'/images/logos/mw_logo_white.png' ?>" alt="Megaworld">
 					</div>
+
 					<div class="menu-container cell auto">
-						<span class="sample">
-							Hello World
-						</span>
+						<?php
+						// Call header nav menu items up to 3 depth
+						wp_nav_menu( array(
+							'menu'		=>	'header-menu',
+							'menu-class'=>	'main-header-menu',
+							'fallback-cb'=>	false,
+							'depth'		=>	3,
+							'item-spacing'=>'discard'
+						) );
+						?>
 					</div>
+
+					<div class="inquire-button-container cell shrink">
+						<a href="#" class="btn cta">Inquire Now</a>
+					</div>
+
 				</div>
 			</div>
 		</nav>

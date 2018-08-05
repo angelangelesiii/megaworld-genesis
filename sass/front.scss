@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+# Init
+--------------------------------------------------------------*/
+
+// Colors
+@import "colors/colors1";
+@import "font-variables";
+
+// VARIABLES
+// =================
+
+
+
+
+// Start here
+
+.test-section {
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    min-height: 700px;
+}
+
+.test-text {
+    padding: 50px 0;
+    line-height: 2em;
+}

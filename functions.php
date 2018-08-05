@@ -1,5 +1,51 @@
 <?php
 /**
+ * 
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * 
+ */
+
+// ACF PRO SETUP
+
+// include_once('advanced-custom-fields/acf.php');
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+// 1. customize ACF path
+add_filter('acf/settings/path', 'my_acf_settings_path');
+function my_acf_settings_path( $path ) {
+     // update path
+    $path = get_stylesheet_directory() . '/acfp/';
+    // return
+    return $path;
+}
+ 
+// 2. customize ACF dir
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+function my_acf_settings_dir( $dir ) {
+    // update path
+    $dir = get_stylesheet_directory_uri() . '/acfp/';
+    // return
+    return $dir;
+}
+
+// 3. Hide ACF field group menu item
+// add_filter('acf/settings/show_admin', '__return_false');
+
+// 4. Include ACF
+include_once( get_stylesheet_directory() . '/acfp/acf.php' );
+
+// Google Maps API key
+function my_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+// END ACF SETUP
+
+/**
  * Megaworld Genesis functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/

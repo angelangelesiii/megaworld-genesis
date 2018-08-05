@@ -57,6 +57,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i,800,800i|Libre+Franklin:200,400,700,900");
 html {
   line-height: 1.15;
   /* 1 */
@@ -349,6 +350,9 @@ template {
 [hidden] {
   display: none; }
 
+/*--------------------------------------------------------------
+# Font Family
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Foundation 6
 --------------------------------------------------------------*/

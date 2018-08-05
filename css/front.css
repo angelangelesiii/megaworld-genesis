@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Init
+--------------------------------------------------------------*/
+/* Coolors Exported Palette - coolors.co/f06449-ede6e3-dadad9-36382e-5bc3eb */
+/* RGB */
+.test-section {
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  min-height: 700px; }
+
+.test-text {
+  padding: 50px 0;
+  line-height: 2em; }

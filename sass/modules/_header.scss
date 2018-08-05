@@ -1,7 +1,14 @@
 
+
+
 #siteheader {
-    background-color: $primary;
+    // background-color: $primary;
+    padding: 20px 0 20px;
     color: $white;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
 
     .logo-container {
 
@@ -12,10 +19,86 @@
         }
     }
 
-    .menu-container {
+    .inquire-button-container {
 
-        .sample {
-            line-height: 64px;
+        .btn.cta {
+            padding: 12px 23px;
+            border-radius: (43.2px / 2);
+            border: 2px solid #FFFFFF;
+            background-color: rgba($secondary, 0.4);
+            text-transform: uppercase;
+            font-size: 0.85em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            color: #FFFFFF;
+            text-decoration: none;
+            margin-top: ($headerHeightMain - 43.2) /2 ;
+
+            &:hover {
+                background-color: $secondary;
+            }
+        }
+    }
+}
+
+// Menu
+#menu-header-menu,
+ul#menu-header-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 30px 0 50px;
+    z-index: 1000;
+    text-align: right;
+
+    > li.menu-item {
+        display: inline-block;
+        position: relative;
+
+        &.menu-item-has-children::after {
+            content: '\f0d7';
+            line-height: $headerHeightMain;
+            color: $purewhite;
+        }
+
+        a {
+            display: block;
+            color: $purewhite;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            line-height: $headerHeightMain;
+            height: $headerHeightMain;
+            padding: 0 12px;
+            transition: all 0.25s ease;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.5)
+            }
+        }
+
+        &:hover { // When top level menu item is hovered over, show sub menu beneath
+            > ul.sub-menu {
+                display: block;
+            }
+        }
+
+        ul.sub-menu {
+            text-align-last: left;
+        }
+
+        > ul.sub-menu {
+            display: none;
+            top: 100%;
+            position: absolute;
+            background-color: $primary;
+            border: 1px solid $black;
+
+            > li.menu-item {
+                white-space: nowrap;
+            }
         }
     }
 }
