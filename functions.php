@@ -176,6 +176,9 @@ function megaworld_genesis_scripts() {
 	// FRONT PAGE STYLESHEET
 	if(is_front_page()) wp_enqueue_style( 'css-front', get_template_directory_uri().'/css/front.css');
 
+	// Fontawesome
+	wp_enqueue_style( 'fontawesome-5', get_template_directory_uri().'/css/fa/css/fontawesome-all.min.css' );
+
 
 
 	// =====================================
@@ -187,6 +190,19 @@ function megaworld_genesis_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Slick
+	wp_enqueue_style( 'slick', get_template_directory_uri().'/css/slick.css' );
+	wp_enqueue_script( 'slick', get_template_directory_uri().'/js/slick.min.js', false, false, true );
+
+	// GSAP
+	wp_enqueue_script( 'GSAP', get_template_directory_uri().'/dist/js/src/TweenMax.min.js', false, false, true);
+	wp_enqueue_script( 'GSAP-scroll', get_template_directory_uri().'/dist/js/src/ScrollToPlugin.min.js', false, false, true);
+
+	// ScrollMagic
+	wp_enqueue_script( 'scrollmagic-main', get_template_directory_uri().'/dist/js/src/ScrollMagic.min.js', false, false, true);
+	wp_enqueue_script( 'scrollmagic-gsap', get_template_directory_uri().'/dist/js/src/animation.gsap.js', false, false, true);
+	wp_enqueue_script( 'scrollmagic-indicators', get_template_directory_uri().'/dist/js/src/debug.addIndicators.min.js', false, false, true);
 }
 add_action( 'wp_enqueue_scripts', 'megaworld_genesis_scripts' );
 
