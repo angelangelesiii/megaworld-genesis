@@ -30,7 +30,7 @@ gulp.task('production', function(){
 });
 
 gulp.task('watch', ['compass'], function(){
-    gulp.watch('sass/*.scss', ['compass']);
+    gulp.watch('sass/**/*.scss', ['compass']);
 })
 
 gulp.task('default');
