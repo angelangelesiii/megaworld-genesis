@@ -2,9 +2,11 @@
 # Init
 --------------------------------------------------------------*/
 
-// Colors
+// imports
 @import "colors/colors1";
 @import "font-variables";
+@import "variables";
+@import "mixins/breakpoint";
 
 // VARIABLES
 // =================
@@ -21,6 +23,9 @@ $headerHeightMain: 64px;
 $headerHeightMobile: 52px;
 $logoHeightMain:48px;
 $logoHeightMobile: 38px;
+
+// breakpoints
+
 
 // --------------------------
 

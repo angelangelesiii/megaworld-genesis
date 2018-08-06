@@ -4,4 +4,18 @@ jQuery(document).ready(function($){ // Document Ready
 
     var controller = new ScrollMagic.Controller();
 
+    var navMenuTransition = new ScrollMagic.Scene({
+        triggerElement: '#top',
+        offset: '50px',
+        triggerHook: 0,
+    })
+    .on('enter', function() {
+        $('#siteheader').removeClass('hit-top');
+    })
+    .on('leave', function() {
+        $('#siteheader').addClass('hit-top');
+	})
+    .addIndicators()
+    .addTo(controller);
+
 }); // END Main
