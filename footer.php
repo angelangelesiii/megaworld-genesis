@@ -13,10 +13,14 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<p>Megaworld and the Megaworld Logo are registered trademarks of Megaworld Corporation.</p>
-		</div><!-- .site-info -->
+	<footer id="main-footer" class="site-footer">
+
+		<div class="wrapper-medium">
+			<img src="<?php echo get_template_directory_uri().'/images/logos/mw_logo_platinum.png'; ?>" alt="Megaworld" class="footer-logo">
+			<p class="attribution">Megaworld and the Megaworld Logo are registered trademarks of Megaworld Corporation.</p>
+		</div>
+		
+	
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
