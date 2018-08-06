@@ -9,13 +9,14 @@ $header-padding: 7px;
     // background-color: $primary;
     color: $primary;
     position: fixed;
+    z-index: 1000;
     width: 100%;
     // padding: $header-padding 0;
     transition: all 0.25s ease;
     background-color: $purewhite;
     background: linear-gradient(none);
     border-bottom: 1px #e4e4e4 solid;
-    box-shadow: 0 0 40px rgba(#000, 0.3);
+    box-shadow: 0 0 40px rgba(#000, 0.15);
 
     &.front-page.hit-top {
         background-color: rgba(0, 0, 0, 0);
@@ -79,7 +80,7 @@ $header-padding: 7px;
 
         .btn.cta {
             padding: 12px 23px;
-            border-radius: (43.2px / 2);
+            // border-radius: (43.2px / 2);
             border: 2px solid #FFFFFF;
             background-color: $secondary;
             text-transform: uppercase;

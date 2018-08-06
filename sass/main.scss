@@ -38,4 +38,6 @@ body {
     font-family: $my-sans-serif;
 }
 
+@import "modules/buttons";
 @import "modules/header";
+@import "modules/footer";

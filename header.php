@@ -57,7 +57,7 @@
 					</div>
 
 					<div class="inquire-button-container cell shrink">
-						<a href="#" class="btn cta">Inquire Now</a>
+						<a href="#" class="btn cta">Inquire Now!</a>
 					</div>
 
 				</div>

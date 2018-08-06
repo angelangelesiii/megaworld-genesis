@@ -1,0 +1,15 @@
+
+#main-footer {
+    background-color: $primary;
+    color: $white;
+    padding: 30px 0;
+
+    .footer-logo {
+        max-height: 48px;
+        display: block;
+    }
+    .attribution {
+        margin: 0;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,30 @@
+
+.btn {
+    padding: 13px 25px;
+    color: #FFF;
+    text-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+
+    &, &.secondary {
+        background-color: $secondary;
+    }
+
+    &.primary {
+        background-color: $primary;
+    }
+    
+    &:hover {
+        color: #FFF;
+    }
+
+    &:hover, &.secondary:hover {
+        background-color: lighten($secondary, 10%);
+    }
+
+    &.primary:hover {
+        background-color: lighten($primary, 10%);
+    }
+
+}
