@@ -15,17 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'megaworld-genesis' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'megaworld-genesis' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'megaworld-genesis' ), 'megaworld-genesis', '<a href="http://zimitmedia.com">Angel T Angeles III</a>' );
-				?>
+			<p>Megaworld and the Megaworld Logo are registered trademarks of Megaworld Corporation.</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
