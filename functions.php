@@ -87,6 +87,10 @@ if ( ! function_exists( 'megaworld_genesis_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'masonry', 300, 300, true);
+		add_image_size( 'bg_medium', 1366, 768, false);
+		add_image_size( 'bg_large', 1920, 1080, false);
+		add_image_size( 'bg_small', 620, 620, false);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
