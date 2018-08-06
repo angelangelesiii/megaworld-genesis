@@ -2,8 +2,11 @@
 
 jQuery(document).ready(function($){ // Document Ready
 
+
+    // ANIMATIONS
     var controller = new ScrollMagic.Controller();
 
+    // navbar animation
     var navMenuTransition = new ScrollMagic.Scene({
         triggerElement: '#top',
         offset: '50px',
@@ -17,5 +20,14 @@ jQuery(document).ready(function($){ // Document Ready
 	})
     .addIndicators()
     .addTo(controller);
+
+
+
+    // SLICK SLIDER
+
+    // featured properties slider
+    $('#featured-properties-slider').slick({
+        arrows: false,
+    });
 
 }); // END Main

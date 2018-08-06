@@ -2,9 +2,21 @@
 # Init
 --------------------------------------------------------------*/
 
-// Colors
+// imports
 @import "colors/colors1";
 @import "font-variables";
+@import "variables";
+@import "mixins/breakpoint";
+
+// VARIABLES
+// =================
+// $primary: rgba(91, 195, 235, 1);
+// $secondary: rgba(240, 100, 73, 1);
+// $purewhite: #FFFFFF;
+// $white: rgba(237, 230, 227, 1);
+// $lightgray: rgba(218, 218, 217, 1);
+// $black: rgba(54, 56, 46, 1);
+// $linkcolor: rgb(64, 135, 163);
 
 // VARIABLES
 // =================
@@ -12,7 +24,7 @@
 
 
 
-// Start here
+// Test Section
 
 .test-section {
     background-size: cover;
@@ -24,4 +36,64 @@
 .test-text {
     padding: 50px 0;
     line-height: 2em;
+}
+
+// Featured Slider
+
+#featured-properties-slider {
+
+    .featured-item.property {
+        height: 100vh;
+        min-height: 620px;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+        .overlay {
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .contents {
+            position: absolute;
+            z-index: 3;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 0 100px;
+            color: $purewhite;
+            text-shadow: 0 3px 5px rgba(#000, 0.7);
+            font-size: 0.9em;
+
+            .sizer {
+                width: 66.6%;
+                @include breakpoint($medium-down) {
+                    width: 100%;
+                }
+            }
+
+            h1.headline {
+                font-family: $my-serif;
+                font-weight: 200;
+                font-size: 5em;
+                 margin: 0 0 10px;
+            }
+
+            h2.subtext {
+                font-size: 1.6em;
+                font-weight: 800;
+                margin: 0 0 30px;
+            }
+
+            .custom-content {
+                font-size: 1.1em; 
+                padding: 0 0 15px;
+            }
+        }
+    }
 }

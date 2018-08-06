@@ -17,7 +17,14 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<section class="test-section" style="background-image: url(<?php echo get_template_directory_uri().'/images/test-bg.jpg' ?>)"></section>
+			
+			<?php 
+			
+			// Templates
+			get_template_part( 'fp-modules/featured' ); 
+			
+			?>
+		
 			<div class="wrapper-medium test-text">
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem praesentium id assumenda maiores esse iure eius quos architecto quae consequatur a omnis illo, veritatis temporibus debitis corporis ipsum fuga expedita dolore veniam aliquam qui. Eligendi cupiditate voluptatem nesciunt expedita beatae earum vero, nemo cumque dolorum fuga praesentium itaque aspernatur alias tenetur pariatur! Fugiat enim omnis incidunt. Quis eligendi dolor magnam odit sint quae, commodi nulla laboriosam suscipit exercitationem recusandae ullam ipsum fuga excepturi aliquid veritatis rerum sunt voluptatem pariatur est? Adipisci, in quia. Reiciendis maiores voluptate tempora deserunt, nesciunt similique consectetur officiis culpa ullam perspiciatis cupiditate voluptates nemo iusto architecto totam labore voluptatem minima ipsam? Autem, consectetur. Eum id, laudantium iusto repudiandae fuga est possimus sapiente obcaecati quisquam beatae ea doloremque illo pariatur porro at quos recusandae voluptates, expedita rem nisi voluptate. Distinctio, quibusdam non. Cum deleniti commodi deserunt minus animi dolores distinctio veniam laboriosam placeat, quibusdam blanditiis tenetur molestias quod ut delectus reprehenderit suscipit odit ipsam molestiae quo? Incidunt, maiores? Nesciunt qui recusandae nemo, obcaecati cumque veniam voluptatem eligendi libero. Optio quibusdam, praesentium architecto deleniti a inventore pariatur quo, maxime amet, neque quam earum veritatis magnam non rem doloremque omnis facere asperiores voluptas? Aliquam dolorum, ad dolorem unde perspiciatis tempore veniam praesentium pariatur, ratione delectus aliquid deleniti ipsum cumque itaque obcaecati repudiandae? Blanditiis sequi labore soluta ut tempore consectetur dolorem temporibus. Enim eligendi ducimus totam, temporibus qui molestias eaque aspernatur quaerat rerum possimus blanditiis in porro, accusantium tempora impedit, ratione repudiandae veniam neque. Laudantium animi dignissimos minus saepe, porro excepturi obcaecati quia odit totam est. At laborum mollitia, enim quam voluptatibus voluptatem quo doloremque sequi id dolorem suscipit cupiditate laudantium distinctio quas quidem consequatur delectus similique, nesciunt hic eveniet et labore temporibus! Dolore similique soluta dolores earum voluptates vitae iure, veritatis illo excepturi beatae eveniet, recusandae quisquam cum provident?
