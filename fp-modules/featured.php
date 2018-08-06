@@ -17,7 +17,7 @@ if (have_rows('featured_properties', 'options')):
         if ($content['headline']) $headline = $content['headline'];
         ?>
 
-        <div class="featured-item property" style="background-image: url(<?php echo $bgImage; ?>);">
+        <div class="featured-item property <?php echo $content['align']; ?>" style="background-image: url(<?php echo $bgImage; ?>);">
             <div class="overlay" style="opacity: 0.3;"></div>
             <div class="contents">
                 <div class="wrapper-medium">
@@ -27,7 +27,7 @@ if (have_rows('featured_properties', 'options')):
                         <div class="custom-content">
                             <?php echo $content['message']; ?>
                         </div>
-                        <a href="<?php get_the_permalink($propertyID); ?>" class="btn">Learn More</a>
+                        <a href="<?php echo get_the_permalink($propertyID); ?>" class="btn">Learn More</a>
                     </div>
                 </div>
             </div>

@@ -41,6 +41,33 @@
 // Featured Slider
 
 #featured-properties-slider {
+    position: relative;
+
+    .featured-arrows {
+        position: absolute;
+        z-index: 10;
+        outline: none;
+        border: none;
+        background: none;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 4em;
+        color: #FFFFFF;
+        cursor: pointer;
+        opacity: 0.45;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.next-btn {
+            right: 20px;
+        }
+
+        &.prev-btn {
+            left: 20px;
+        }
+    }
 
     .featured-item.property {
         height: 100vh;
@@ -58,6 +85,20 @@
             height: 100%;
             z-index: 2;
         }
+
+        &.right .contents {
+            text-align: right;
+            .sizer {
+                margin: 0 0 0 auto;
+            }
+        }
+
+        &.center .contents {
+            text-align: center;
+            .sizer {
+                margin: 0 auto;
+            }
+        }
         
         .contents {
             position: absolute;
@@ -65,10 +106,11 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 0 0 100px;
+            padding: 0 0 150px;
             color: $purewhite;
             text-shadow: 0 3px 5px rgba(#000, 0.7);
             font-size: 0.9em;
+            text-align: left;
 
             .sizer {
                 width: 66.6%;
@@ -82,18 +124,62 @@
                 font-weight: 200;
                 font-size: 5em;
                  margin: 0 0 10px;
+                 visibility: hidden;
             }
 
             h2.subtext {
                 font-size: 1.6em;
                 font-weight: 800;
                 margin: 0 0 30px;
+                visibility: hidden;
             }
 
             .custom-content {
                 font-size: 1.1em; 
                 padding: 0 0 15px;
+                visibility: hidden;
+            }
+
+            .btn {
+                visibility: hidden;
             }
         }
+    }
+}
+
+
+// Intro
+
+.intro {
+    // background-color: $white;
+    color: rgb(100, 100, 100);
+    padding: 70px 0;
+    text-align: center;
+    font-family: my-serif;
+
+    h1.intro-title {
+        text-transform: uppercase;
+        font-size: 2.8em;
+        font-family: my-serif;
+        letter-spacing: 0.08em;
+        margin: 0 0 30px;
+
+        &::first-letter {
+            font-size: 1.3em;
+        }
+
+        &::before {
+            display: block;
+            width: 66.6%;
+            max-width: 500px;
+            content: '';
+            height: 2px;
+            background-color: rgb(100, 100, 100);
+            margin: 20px auto 20px;
+        }
+    }
+    p {
+        font-size: 1.3em;
+        line-height: 2em;
     }
 }

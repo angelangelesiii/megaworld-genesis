@@ -13,9 +13,8 @@ $header-padding: 7px;
     width: 100%;
     // padding: $header-padding 0;
     transition: all 0.25s ease;
-    background-color: $purewhite;
+    background-color: rgba($purewhite, 0.9);
     background: linear-gradient(none);
-    border-bottom: 1px #e4e4e4 solid;
     box-shadow: 0 0 40px rgba(#000, 0.15);
 
     &.front-page.hit-top {
