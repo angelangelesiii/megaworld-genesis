@@ -245,3 +245,33 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+
+// ===========================================
+// ACF Pro Options Page Instantiate
+// ===========================================
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Site Options',
+		'menu_title'	=> 'Site Options',
+		'menu_slug' 	=> 'site-options',
+		'capability'	=> 'publish_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-admin-generic',
+		'position'		=> '60'
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Featured',
+		'menu_title'	=> 'Featured',
+		'menu_slug' 	=> 'featured',
+		'capability'	=> 'publish_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-star-filled',
+		'position'		=> '15'
+	));
+	
+}
