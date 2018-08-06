@@ -16,7 +16,7 @@ gulp.task('compass', function(){
     .pipe(autoprefixer({
         browsers: ['last 2 versions', 'ie >= 9', 'android >= 4.4', 'ios >= 7']
     }))
-    // .pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(gulp.dest('css/'));
 
     gulp.src('css/style.css')
