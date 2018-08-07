@@ -13,7 +13,7 @@ $header-padding: 7px;
     width: 100%;
     // padding: $header-padding 0;
     transition: all 0.25s ease;
-    background-color: rgba($purewhite, 0.9);
+    background-color: rgba($purewhite, 1);
     background: linear-gradient(none);
     box-shadow: 0 0 40px rgba(#000, 0.15);
 
@@ -36,6 +36,12 @@ $header-padding: 7px;
             img.main-color {
                 opacity: 0;
             }
+
+            &::after,
+            &::before {
+                opacity: 0.25;
+                width: 0;
+            }
         }
     }
 
@@ -47,6 +53,25 @@ $header-padding: 7px;
 
     .logo-container {
         position: relative;
+
+        &::after,
+        &::before {
+            position: absolute;
+            z-index: -1;
+            background-color: $primary;
+            width: 70%;
+            height: $headerHeightMain + (73.2 - $headerHeightMain);
+            top: -7px;
+            content: '';
+            @include headerTransition();
+            opacity: 1;
+        }
+        &::before {
+            right: 50%;
+        }
+        &::after {
+            left: 50%;
+        }
         
         img.logo {
             max-height: $logoHeightMain;
@@ -106,6 +131,9 @@ ul#menu-header-menu {
     padding: 0 30px 0 50px;
     z-index: 1000;
     text-align: right;
+    @include breakpoint($medium-down) {
+        display: none;
+    }
 
     > li.menu-item {
         display: inline-block;
