@@ -1,6 +1,6 @@
 
 #main-footer {
-    background-color: $primary;
+    background-color: tint($primary, 10%);
     color: $white;
     padding: 30px 0;
 
@@ -9,7 +9,9 @@
         display: block;
     }
     .attribution {
-        margin: 0;
-        font-size: 0.9em;
+        margin: 10px 0;
+        font-size: 0.7em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
     }
 }

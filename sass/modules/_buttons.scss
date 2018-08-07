@@ -20,11 +20,11 @@
     }
 
     &:hover, &.secondary:hover {
-        background-color: lighten($secondary, 10%);
+        background-color: tint($secondary, 20%);
     }
 
     &.primary:hover {
-        background-color: lighten($primary, 10%);
+        background-color: tint($primary, 20%);
     }
 
 }

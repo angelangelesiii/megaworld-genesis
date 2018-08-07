@@ -32,6 +32,7 @@ jQuery(document).ready(function($){ // Document Ready
         speed: 1000,
         prevArrow: '<button type="button" class="featured-arrows prev-btn"><i class="fas fa-angle-left"></i></button>',
         nextArrow: '<button type="button" class="featured-arrows next-btn"><i class="fas fa-angle-right"></i></button>',
+        pauseOnHover: false,
     });
 
     function animateContents() {

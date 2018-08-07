@@ -17,7 +17,7 @@
 
 		<div class="wrapper-medium">
 			<img src="<?php echo get_template_directory_uri().'/images/logos/mw_logo_platinum.png'; ?>" alt="Megaworld" class="footer-logo">
-			<p class="attribution">Megaworld and the Megaworld Logo are registered trademarks of Megaworld Corporation.</p>
+			<p class="attribution">Megaworld&reg; and the Megaworld Logo&trade; are registered trademarks of Megaworld Corporation.</p>
 		</div>
 		
 	
