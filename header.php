@@ -39,31 +39,42 @@
 					<div class="logo-container cell shrink">
 						<a href="<?php bloginfo( url ) ?>">
 							<img class="main-color logo" src="<?php echo get_template_directory_uri().'/images/logos/mw_logo_white.png' ?>" alt="Megaworld">
-							<img class="secondary-color logo" src="<?php echo get_template_directory_uri().'/images/logos/mw_logo_white.png' ?>" alt="Megaworld">
 						</a>
 					</div>
 
-					<div class="menu-container cell auto">
+					<div class="hspacer cell auto hide-for-large"></div>
+
+					<div class="menu-container cell large-auto">
 						<?php
 						// Call header nav menu items up to 3 depth
 						wp_nav_menu( array(
 							'menu'		=>	'header-menu',
-							'menu-class'=>	'main-header-menu',
-							'fallback-cb'=>	false,
+							'menu_class'=>	'main-header-menu',
+							'fallback_cb'=>	false,
 							'depth'		=>	3,
-							'item-spacing'=>'discard'
+							'item_spacing'=>'discard'
 						) );
 						?>
 					</div>
 
-					<div class="inquire-button-container cell shrink">
+					<div class="inquire-button-container cell shrink show-for-medium">
 						<a href="#" class="btn cta">Inquire Now!</a>
+					</div>
+
+					<div class="hamburger-menu-container hide-for-large cell shrink">
+						<button class="touch-menu" id="main-mobile-button">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
+						</button>
 					</div>
 
 				</div>
 			</div>
 		</nav>
 	</header>
+
+	<div class="dimmer"></div>
 
 	<!-- START SITE CONTENT -->
 	<div id="content" class="site-content">

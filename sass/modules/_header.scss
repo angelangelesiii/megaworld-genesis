@@ -1,4 +1,10 @@
 
+// header
+$headerHeightMain: 64px;
+$headerHeightMobile: 52px;
+$logoHeightMain:48px;
+$logoHeightMobile: 38px;
+
 @mixin headerTransition() {
     transition: all 0.25s ease;
 }
@@ -17,6 +23,10 @@ $header-padding: 7px;
     background: linear-gradient(none);
     box-shadow: 0 0 40px rgba(#000, 0.15);
 
+    & #sitenav > .wrapper-big {
+        padding: 0 15px 0 0;
+    }
+
     &.front-page.hit-top {
         background-color: rgba(0, 0, 0, 0);
         background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
@@ -24,62 +34,44 @@ $header-padding: 7px;
         border-bottom: 0;
         box-shadow: 0 0 0 rgba(#000, 0);
 
+        @include breakpoint(medium down){
+            // padding: 0;
+        }
+
         .logo-container,
         .inquire-button-container {
             margin: 0;
         }
 
         .logo-container {
-            img.secondary-color {
-                opacity: 1;
-            }
-            img.main-color {
-                opacity: 0;
-            }
-
-            &::after,
-            &::before {
-                opacity: 0.25;
-                width: 0;
-            }
+            background-color: transparent;
         }
     }
 
     .logo-container,
     .inquire-button-container {
-        margin: $header-padding 0;
+        // margin: $header-padding 0;
         @include headerTransition();
+        @include breakpoint(medium down) {
+            margin: 0;
+        }
     }
 
     .logo-container {
+        background-color: $primary;
         position: relative;
+        padding: 8px 30px;
 
-        &::after,
-        &::before {
-            position: absolute;
-            z-index: -1;
-            background-color: $primary;
-            width: 70%;
-            height: $headerHeightMain + (73.2 - $headerHeightMain);
-            top: -7px;
-            content: '';
-            @include headerTransition();
-            opacity: 1;
-        }
-        &::before {
-            right: 50%;
-        }
-        &::after {
-            left: 50%;
+        > a {
+            display: block;
         }
         
         img.logo {
             max-height: $logoHeightMain;
-            margin-top: (($headerHeightMain -$logoHeightMain)/2);
             @include headerTransition();
         }
         img.main-color {
-            display: inline-block;
+            display: block;
         }
         img.secondary-color {
             position: absolute;
@@ -87,6 +79,10 @@ $header-padding: 7px;
             z-index: 2;
             opacity: 0;
         }
+    }
+
+    .menu-container {
+        height: $headerHeightMain;
     }
 
 
@@ -114,7 +110,7 @@ $header-padding: 7px;
             display: inline-block;
             color: #FFFFFF;
             text-decoration: none;
-            margin-top: ($headerHeightMain - 43.2) /2 ;
+            margin-top: 10px;
 
             &:hover {
                 background-color: lighten($secondary, 10%);
@@ -131,9 +127,6 @@ ul#menu-header-menu {
     padding: 0 30px 0 50px;
     z-index: 1000;
     text-align: right;
-    @include breakpoint($medium-down) {
-        display: none;
-    }
 
     > li.menu-item {
         display: inline-block;
@@ -158,7 +151,7 @@ ul#menu-header-menu {
             letter-spacing: 0.15em;
             line-height: $headerHeightMain;
             height: $headerHeightMain;
-            padding:  $header-padding 10px;
+            padding:  0 10px;
             position: relative;
             @include headerTransition();
             
@@ -293,3 +286,133 @@ ul#menu-header-menu {
     }
 }
 
+// Mobile Menu
+#siteheader{
+
+    &.front-page.hit-top {
+        @include breakpoint(medium down) {
+            padding: 0;
+        }
+    }
+    
+
+    &.front-page.hit-top {
+
+        button.touch-menu {
+
+            .line {
+                background: $purewhite;
+            }
+        }
+    }
+
+    .hamburger-menu-container {
+        padding: 0 20px 0 30px;
+
+        button.touch-menu {
+            height: 43px;
+            width: 43px;
+            margin-top: 10px;
+            padding: 0 4px;
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                .line:first-of-type {
+                    width: 75%;
+                }
+                .line:last-of-type {
+                    width: 100%;
+                }
+                .line {
+                    width: 50%;
+                }
+            } 
+
+            .line {
+                height: 5px;
+                width: 100%;
+                margin-bottom: 5.5px;
+                background-color: $primary;
+                @include headerTransition();
+
+                &:first-of-type{
+                    width: 50%;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
+#siteheader .menu-container {
+    @include breakpoint(medium down) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex: none;
+        padding: 0;
+        visibility: hidden;
+        // transition: all 0.5s ease;
+
+        #menu-header-menu,
+        ul#menu-header-menu {
+            width: 100%;
+            background-color: $purewhite;
+            padding: 0;
+            position: relative;
+            border-bottom: #000 1px solid;
+
+            &::before {
+                display: block;
+                content: '';
+                width: 100%;
+                height: 30px;
+                background: linear-gradient(to bottom, rgba(#000, 0.1), rgba(#000, 0));
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            > li.menu-item {
+                display: block;
+                text-align-last: left;
+                position: relative;
+                z-index: 3;
+
+                > a {
+                    color: $primary !important;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dimmer {
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0;
+    z-index: 500;
+    @include headerTransition();
+
+    &.dim {
+        visibility: visible;
+        opacity: 0.7;
+    }
+}

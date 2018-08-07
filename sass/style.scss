@@ -75,7 +75,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "settings";
 @import "foundation";
-@import "mixins/breakpoint";
+// @import "mixins/breakpoint";
+
 
 @include foundation-typography;
 @include foundation-forms;
@@ -84,7 +85,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @include foundation-xy-grid-classes;
 
 // Visibility Classes
-// @include foundation-visibility-classes;
+@include foundation-visibility-classes;
 
 
 

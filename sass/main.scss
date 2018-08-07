@@ -6,7 +6,8 @@
 @import "colors/colors1";
 @import "font-variables";
 @import "variables";
-@import "mixins/breakpoint";
+@import "settings";
+// @import "mixins/breakpoint";
 
 // VARIABLES
 // =================
@@ -18,11 +19,7 @@
 // $black: rgba(54, 56, 46, 1);
 // $linkcolor: rgb(64, 135, 163);
 
-// header
-$headerHeightMain: 64px;
-$headerHeightMobile: 52px;
-$logoHeightMain:48px;
-$logoHeightMobile: 38px;
+
 
 // breakpoints
 
@@ -36,6 +33,10 @@ body {
     background-color: $purewhite;
     color: $black;
     font-family: $my-sans-serif;
+}
+
+body.lockdown {
+    overflow: hidden;
 }
 
 @import "modules/buttons";

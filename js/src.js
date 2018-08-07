@@ -2,6 +2,7 @@
 
 jQuery(document).ready(function($){ // Document Ready
 
+    var is_top = true;
 
     // ANIMATIONS
     var controller = new ScrollMagic.Controller();
@@ -14,12 +15,63 @@ jQuery(document).ready(function($){ // Document Ready
     })
     .on('enter', function() {
         $('#siteheader').removeClass('hit-top');
+        is_top = false;
+        // $('#siteheader').addClass('opaque');
     })
     .on('leave', function() {
         $('#siteheader').addClass('hit-top');
+        is_top = true;
+        // $('#siteheader').removeClass('opaque');
 	})
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
+
+    
+    // MENU BUTTON
+    var mobileButton = $('#main-mobile-button'),
+        mobileTargetMenu = $('#siteheader .menu-container'),
+        heightSource = $('#main-header-menu:hidden').outerHeight();
+    
+    console.log(is_top);
+
+    function menuOpen(){
+        mobileTargetMenu.addClass('open');
+        TweenMax.fromTo(mobileTargetMenu, 0.25, {
+            autoAlpha: 0
+        }, {
+            autoAlpha: 1,
+            ease: Power3.easeOut
+        })
+        if (is_top == true) $('#siteheader').removeClass('hit-top');
+        console.log(is_top);
+
+        $('.dimmer').addClass('dim');
+        $('body').addClass('lockdown');
+    }
+
+    function menuClose(){
+        mobileTargetMenu.removeClass('open');
+        TweenMax.to(mobileTargetMenu, 0.25, {
+            autoAlpha: 0
+        })
+        if (is_top == true) $('#siteheader').addClass('hit-top');
+
+        $('.dimmer').removeClass('dim');
+        $('body').removeClass('lockdown');
+    }
+    
+    mobileButton.on('click', function(){
+
+        if (!mobileTargetMenu.hasClass('open')) {
+            menuOpen();            
+        } else {
+            menuClose();
+        }
+    });
+
+    $('.dimmer').on('click', function(){
+        menuClose();
+    })
 
 
 
