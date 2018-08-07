@@ -394,6 +394,21 @@ ul#menu-header-menu {
                         display: none;
                     }
                 }
+
+                .sub-menu {
+                    position: static;
+                    display: block;
+                    box-shadow: none;
+                    background: $purewhite;
+                    
+                    &::before {
+                        display: none;
+                    }
+
+                    a {
+                        color: $primary;
+                    }
+                }
             }
         }
     }

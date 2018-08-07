@@ -6,6 +6,7 @@
 @import "colors/colors1";
 @import "font-variables";
 @import "variables";
+@import "settings";
 // @import "mixins/breakpoint";
 
 // VARIABLES
@@ -55,6 +56,9 @@
         color: #FFFFFF;
         cursor: pointer;
         opacity: 0.45;
+        @include breakpoint(medium down) {
+            display: none !important;
+        }
 
         &:hover {
             opacity: 1;
@@ -112,17 +116,34 @@
             text-shadow: 0 3px 5px rgba(#000, 0.7);
             font-size: 0.9em;
             text-align: left;
+            @include breakpoint(medium only) {
+                padding: 0 40px 100px;
+            }
+            @include breakpoint(small only) {
+                padding: 0 15px 100px;
+            }
+            
 
             .sizer {
                 width: 66.6%;
+                @include breakpoint(medium only) {
+                    width: 80%;
+                }
+                @include breakpoint(small only) {
+                    width: 90%;
+                }
             }
 
             h1.headline {
                 font-family: $my-serif;
                 font-weight: 200;
                 font-size: 5em;
-                 margin: 0 0 10px;
-                 visibility: hidden;
+                line-height: 1.2em;
+                margin: 0 0 10px;
+                visibility: hidden;
+                @include breakpoint(small only) {
+                    font-size: 4em;
+                }
             }
 
             h2.subtext {

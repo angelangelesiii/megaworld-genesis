@@ -73,6 +73,11 @@ jQuery(document).ready(function($){ // Document Ready
         menuClose();
     })
 
+    $(window).resize(function(){
+        if($(window).outerWidth() > 1024){
+            mobileTargetMenu.removeAttr('style');
+        }
+    });
 
 
     // SLICK SLIDER
