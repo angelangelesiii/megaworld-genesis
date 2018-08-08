@@ -22,7 +22,8 @@ get_header();
 			
 			// Templates
 			get_template_part( 'fp-modules/featured' ); 
-			get_template_part( 'fp-modules/intro' ); 
+			get_template_part( 'fp-modules/genesis' ); 
+			// get_template_part( 'fp-modules/intro' ); 
 			
 			?>
 		

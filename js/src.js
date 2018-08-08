@@ -26,6 +26,40 @@ jQuery(document).ready(function($){ // Document Ready
     // .addIndicators()
     .addTo(controller);
 
+    // genesis animation
+    var genesisTween = new TimelineMax()
+        .from('.genesis .text-contents', 1, {
+            autoAlpha: 0,
+            x: -50,
+            ease: Power3.easeOut
+        }, 'a')
+        .from('.genesis .photo-container img', 1, {
+            autoAlpha: 0,
+            x: 50,
+            ease: Power3.easeOut
+        }, 'a+=0.5');
+
+    var genesisIntro = new ScrollMagic.Scene({
+        triggerElement: '.genesis',
+        triggerHook: 0.8
+    })
+        .setTween(genesisTween)
+        // .addIndicators()
+        .addTo(controller);
+
+    var genesisParallax = new ScrollMagic.Scene({
+        triggerElement: '.genesis',
+        triggerHook: 1,
+        duration: $('.genesis').outerHeight()+$(window).outerHeight()
+    })
+        .setTween('.genesis .animated-element', 1, {
+            // css: {right: '25%'},
+            y: '50%',
+            ease: Linear.easeNone
+        })
+        // .addIndicators({name: 'parallax'})
+        .addTo(controller);
+
     
     // MENU BUTTON
     var mobileButton = $('#main-mobile-button'),
