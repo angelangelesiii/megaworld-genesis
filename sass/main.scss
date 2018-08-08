@@ -31,7 +31,7 @@
 
 body {
     background-color: $purewhite;
-    color: $black;
+    color: $font;
     font-family: $my-sans-serif;
 }
 
@@ -39,7 +39,13 @@ body.lockdown {
     overflow: hidden;
 }
 
+#content {
+    min-height: 700px;
+}
+
 @import "modules/buttons";
 @import "modules/header";
 @import "modules/footer";
+@import "modules/isogrid";
+@import "modules/properties";
 

@@ -1,0 +1,62 @@
+
+.iso-grid {
+
+    .grid-sizer,
+    .grid-item {
+        width: 33.3%;
+        @include breakpoint(medium only) {
+            width: 33.3%;
+        }    
+        @include breakpoint(small only) {
+            width: 50%;
+        }         
+    }
+}
+
+.fp-property-grid {
+    
+    .iso-grid {
+
+        .grid-sizer,
+        .grid-item {
+            width: 25%;
+            @include breakpoint(medium only) {
+                width: 33.3%;
+            }    
+            @include breakpoint(small only) {
+                width: 50%;
+            }         
+        }
+    }
+}
+
+.filter-menu {
+    text-align: center;
+    
+    button.iso-filter {
+        background-color: $lightgray;
+        color: $font;
+        font-family: $my-sans-serif;
+        font-weight: 200;
+        letter-spacing: 0.09em;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        padding: 7px 15px;
+        margin: 4px 4px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+
+        &:hover {
+            background-color: darken($lightgray, 15%);
+        }
+        
+        &.active-filter,
+        &.active-filter:hover {
+            background-color: $primary;
+            color: lighten($primary, 50%);
+            cursor: default;
+        }
+    }
+}

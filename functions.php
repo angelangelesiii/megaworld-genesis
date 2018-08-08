@@ -94,8 +94,8 @@ if ( ! function_exists( 'megaworld_genesis_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'header-menu' => esc_html__( 'Header', 'megaworld-genesis' ),
-			'footer-menu' => esc_html__( 'Header', 'megaworld-genesis' )
+			'header-menu' => esc_html__( 'Header Menu', 'megaworld-genesis' ),
+			'footer-menu' => esc_html__( 'Footer Menu', 'megaworld-genesis' )
 		) );
 
 		/*
@@ -207,11 +207,16 @@ function megaworld_genesis_scripts() {
 	// GSAP
 	wp_enqueue_script( 'GSAP', get_template_directory_uri().'/js/src/TweenMax.min.js', false, false, true);
 	wp_enqueue_script( 'GSAP-scroll', get_template_directory_uri().'/js/src/ScrollToPlugin.min.js', false, false, true);
-
+	
 	// ScrollMagic
 	wp_enqueue_script( 'scrollmagic-main', get_template_directory_uri().'/js/src/ScrollMagic.min.js', false, false, true);
 	wp_enqueue_script( 'scrollmagic-gsap', get_template_directory_uri().'/js/src/animation.gsap.js', false, false, true);
 	wp_enqueue_script( 'scrollmagic-indicators', get_template_directory_uri().'/js/src/debug.addIndicators.min.js', false, false, true);
+
+	// Isotope
+	wp_enqueue_script( 'imagesloaded', 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', false, false, true );
+	wp_enqueue_script( 'isotope', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', false, false, true );
+
 
 	// Main
 	wp_enqueue_script( 'main-js', get_template_directory_uri().'/js/src.js', false, false, true );

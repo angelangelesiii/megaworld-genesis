@@ -170,4 +170,30 @@ jQuery(document).ready(function($){ // Document Ready
         $(this).find('.btn').css('visibility','hidden');
     });
 
+
+    // ISOTOPE
+
+    $('.properties-grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: 'true',
+        stagger: 150,
+        masonry: {
+            columnWidth: '.grid-sizer',
+        },
+        getSortData: {
+            name: '.name',
+            category: '[data-cities]',
+        }
+    });
+
+    $('button.filter').on('click', function(){
+        var city = $(this).data('city');
+        console.log(city);
+        $('.properties-grid').isotope({
+            filter: city,
+        })
+        $('button.iso-filter').removeClass('active-filter');
+        $(this).addClass('active-filter');
+    });
+
 }); // END Main

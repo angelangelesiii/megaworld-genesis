@@ -26,7 +26,8 @@
 	<?php // additional header classes
 	$headerClasses = get_post_type( $post->ID );
 	if (is_front_page()) $headerClasses .= ' front-page hit-top';
-	if (is_home()) $headerClasses .= 'blog';
+	if (is_home()) $headerClasses .= ' blog';
+	if (!is_front_page()) $headerClasses .= ' not-front-page';
 	?>
 
 	<div id="top"></div>
@@ -78,3 +79,4 @@
 
 	<!-- START SITE CONTENT -->
 	<div id="content" class="site-content">
+		<div class="spacer <?php echo $headerClasses; ?>"></div>

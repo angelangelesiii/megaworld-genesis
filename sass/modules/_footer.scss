@@ -1,5 +1,16 @@
 
+#main-footer .footer-main-row {
+    
+    .cell {
+        padding: 0 10px;
+    }
+}
+
 #main-footer {
+    background-color: tint($primary, 10%);
+    background: linear-gradient(to top, tint($primary, 10%), tint($primary, 30%));
+    color: $white;
+    padding: 50px 0 0;
     &::after {
         content: '';
         display: block;
@@ -9,19 +20,33 @@
         margin-top: 30px;
     }
 
-    background-color: tint($primary, 10%);
-    color: $white;
-    padding: 30px 0 0;
-
     .footer-logo {
-        max-height: 48px;
+        max-height: 56px;
+        max-width: 100%;
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .attribution {
         margin: 10px 0;
         font-size: 0.7em;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
+        // letter-spacing: 0.05em;
+        // text-transform: uppercase;
+    }
+}
+
+#footer-menu {
+    list-style-type: none;
+
+    > li.menu-item {
+        
+        a {
+            color: rgba($purewhite, 0.75);
+            text-transform: uppercase;
+            font-size: 1em;
+            font-weight: 700;
+            &:hover {
+                color: $purewhite;
+            }
+        }
     }
 }

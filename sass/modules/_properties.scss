@@ -1,0 +1,168 @@
+
+.special-page-header {
+    padding: 60px 0 40px;
+    color: $font;
+    text-align: center;
+
+    .title {
+        font-family: $my-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 3.8em;
+        margin: 0;
+        line-height: 1.2em;
+    }
+    
+    .subtext {
+        font-family: $my-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 1.1em;
+        margin: 0;
+    }
+}
+
+.properties-container {
+    margin-bottom: 80px;
+
+    &.fp-property-grid {
+        padding: 70px 0 100px;
+        background-color: $lightgray;
+        margin: 0;
+
+        .section-title {
+            margin: 0;
+            font-family: $my-serif;
+            text-transform: uppercase;
+            color: $font;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        .subtext {
+            font-family: $my-serif;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            letter-spacing: 0.09em;
+            margin: 0 0 60px;
+            text-align: center;
+        }
+
+        .properties-btn-container {
+            margin: 50px 0 0;
+            text-align: center;
+        }
+
+        .contents-2 {
+            display: none;
+        }
+
+        .contents {
+            .inner {
+                transform: translate(-50%, -50%) scale(0.8) !important;
+            }
+        }
+    }
+
+    .filter-menu {
+        margin: 0 0 50px;
+    }
+
+    .iso-grid {
+
+        .property-item {
+            position: relative;
+            overflow: hidden;
+            
+            .aspect-ratio-sizer {
+                padding-bottom: 100%;
+                background-size: cover;
+                background-position: center center;
+                transition: all 0.3s ease;
+                
+            }
+
+            &:hover {
+
+                .aspect-ratio-sizer {
+                    transform: scale(1.1);
+                }
+                .contents {
+                    top: 0;
+                    opacity: 1;
+                }
+                .contents-2 {
+                    bottom: 100%;
+                    opacity: 0;
+                }
+            }
+
+            .contents {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                opacity: 0;
+                z-index: 5;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($primary, 0.6);
+                color: $purewhite;
+                text-align: center;
+                transition: all 0.3s ease;
+
+                .inner {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    padding: 15px;
+
+                    .mini-logo {
+                        max-height: 60px;
+                        margin-bottom: 20px;
+                    }
+
+                    .property-name {
+                        font-family: $my-serif;
+                        line-height: 1.2em;
+                    }
+                }
+            }
+
+            .contents-2 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                opacity: 1;
+                z-index: 5;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000, 0.2);
+                color: $purewhite;
+                text-align: center;
+                transition: all 0.3s ease;
+
+                .inner {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.9);
+                    width: 100%;
+                    padding: 15px;
+
+                    .mini-logo {
+                        max-height: 60px;
+                        margin-bottom: 20px;
+                    }
+
+                    .property-name {
+                        font-family: $my-serif;
+                        line-height: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+

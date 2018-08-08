@@ -32,6 +32,10 @@ get_header();
 				<?php the_content(); ?>
 			</section>
 			<?php endif; ?>
+
+			<?php 
+			get_template_part( 'fp-modules/property-grid' ); 
+			?>
 			
 		</main><!-- #main -->
 	</div><!-- #primary -->
