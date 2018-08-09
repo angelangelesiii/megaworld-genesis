@@ -1,13 +1,8 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying all single posts
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package Megaworld_Genesis
  */
@@ -15,7 +10,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area single-page <?php echo get_post_type(); ?>">
+	<div id="primary" class="content-area single-page property">
 		<main id="main" class="site-main">
 
 			<div class="wrapper-medium">
@@ -26,7 +21,7 @@ get_header();
 
 				<div class="grid-x">
 
-					<div class="main-column cell small-12 medium-8 large-9">
+					<div class="main-column cell small-12">
 						<?php if (have_posts()): ?>
 			
 						<article class="article single <?php echo get_post_type(); ?>">
@@ -42,10 +37,6 @@ get_header();
 						</article>
 			
 						<?php endif; ?>
-					</div>
-
-					<div class="sidebar-column cell small-12 medium-4 large-3">
-						<?php get_sidebar(); ?>
 					</div>
 
 				</div>

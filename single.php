@@ -10,24 +10,42 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area single-page">
 		<main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			<div class="wrapper-medium">
 
-			get_template_part( 'template-parts/content', get_post_type() );
+				<header class="page-header">
+					<h1 class="page-title"><?php echo get_the_title($post->ID); ?></h1>
+				</header>
 
-			the_post_navigation();
+				<div class="grid-x">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+					<div class="main-column cell small-12 medium-8 large-9">
+						<?php if (have_posts()): ?>
+			
+						<article class="article single <?php echo get_post_type(); ?>">
+							<?php while (have_posts()): the_post(); ?>
 
-		endwhile; // End of the loop.
-		?>
+							<?php if(has_post_thumbnail()): ?>
+							<img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'bg_medium' ) ?>" alt="" class="post-thumb">
+							<?php endif; ?>
+
+							<?php the_content(  ); ?>
+				
+							<?php endwhile; ?>
+						</article>
+			
+						<?php endif; ?>
+					</div>
+
+					<div class="sidebar-column cell small-12 medium-4 large-3">
+						<?php get_sidebar(); ?>
+					</div>
+
+				</div>
+
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

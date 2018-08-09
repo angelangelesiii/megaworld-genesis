@@ -17,23 +17,35 @@
     }
 }
 
-.blog-area {
+@mixin cardStyle() {
+    background-color: $purewhite;
+    box-shadow: 0 2px 0 rgba($lightgray, 1);
+    border: 1px solid $lightgray;
+}
+
+.blog-area,
+.single-page {
     background-color: shade($purewhite, 5%);
     padding: 40px 0;
 
     .main-column,
     .sidebar-column {
         padding: 0 15px;
+
+        @include breakpoint(small only) {
+            padding: 0;
+        }
     }
 
     .blog-posts {
 
         .article {
-            background-color: $purewhite;
+            @include cardStyle();
             padding: 80px 60px;
             margin-bottom: 30px;
-            box-shadow: 0 2px 0 rgba($lightgray, 1);
-            border: 1px solid $lightgray;
+            @include breakpoint(small only) {
+                padding: 30px 20px 50px;
+            }
 
             .date-container {
                 text-align: center;
@@ -71,6 +83,10 @@
                     border-left: 1px solid $lightgray;
                     border-bottom: 1px solid $lightgray;
                     position: relative;
+                    @include breakpoint(small only) {
+                        padding: 30px 15px;
+                        margin-left: 15px;
+                    }
 
                     .article-title {
                         text-align: left;
@@ -92,6 +108,9 @@
                 .article-title {
                     margin: 0 0 30px;
                     text-align: center;
+                    @include breakpoint(small only) {
+                        font-size: 2rem;
+                    }
     
                     a:link,
                     a:visited {
@@ -103,8 +122,14 @@
                 }
 
                 .excerpt-container {
-                    line-height: 2em;
                     font-weight: 200;
+                    @include breakpoint(small only) {
+                        font-size: 0.9em;
+                    }
+
+                    p {
+                        line-height: 2em;
+                    }
                 }
 
                 .read-more-btn {
@@ -156,6 +181,23 @@
                 content: '';
             }
             
+        }
+    }
+
+    .article.single {
+        @include cardStyle();
+        padding: 80px 80px;
+
+        .post-thumb {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 2em;
+            font-weight: 200;
         }
     }
 }
