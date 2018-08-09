@@ -39,13 +39,34 @@ body.lockdown {
     overflow: hidden;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: $my-serif;
+}
+
 #content {
     min-height: 700px;
 }
 
+a:link,
+a:visited {
+    color: $primary;
+}
+a:hover {
+    color: lighten($primary, 10%);
+}
+
+.screen-reader-text {
+    font-size: 0;
+    overflow:hidden;
+    height: 1px;
+    width: 1px;
+}
+
+
 @import "modules/buttons";
 @import "modules/header";
 @import "modules/footer";
+@import "modules/blog";
 @import "modules/isogrid";
 @import "modules/properties";
 

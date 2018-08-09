@@ -15,6 +15,22 @@
     &.primary {
         background-color: $primary;
     }
+
+    &.white {
+        background-color: white;
+        background: linear-gradient(to top, shade($purewhite, 10%), $purewhite);
+        font-family: $my-serif;
+        color: $font;
+        font-weight: 400;
+        font-size: 0.9em;
+        border: 1px solid $lightgray;
+        transition: all 0.25s ease;
+        &:hover {
+            border: 1px solid $lightgray;
+            color: $purewhite;
+            background: $primary;
+        }
+    }
     
     &:hover {
         color: #FFF;
