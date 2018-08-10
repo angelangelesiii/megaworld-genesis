@@ -1,0 +1,106 @@
+
+.search-page {
+
+    .search-box {
+        @include cardStyle();
+        padding: 15px 40px;
+        margin: 0 15px 25px;
+        overflow: auto;
+        @include breakpoint(small only) {
+            margin: 0 0 15px;
+        }
+    }
+
+    .search-header {
+        
+        padding: 0 15px;
+
+        .search-title {
+            font-size: 2.2em;
+        }
+    }
+    
+    .search-results {
+        @include cardStyle();
+        padding: 60px 30px;
+        @include breakpoint(small only) {
+            padding: 40px 20px;
+        }
+
+        .search-item {
+            margin-bottom: 30px;
+            font-size: 0.9em;
+
+            .article-title {
+                font-size: 2em;
+                line-height: 1.2em;
+            }
+
+            .link {
+                font-size: 0.9em;
+                margin: 5px 0;
+                display: inline-block;
+
+                a {
+                    color: lighten($font, 15%);
+                }
+
+            }
+        }
+    }
+}
+
+.search-form {
+    
+    .search-textbox,
+    .search-submit {
+        height: 48px;
+        font-family: $my-sans-serif;
+    }
+
+    .search-textbox {
+        padding: 0 30px;
+        box-shadow: none;
+        border: 1px $lightgray solid;
+        margin: 0;
+        color: $font;
+
+        &:focus {
+            outline: 1px $secondary solid;
+        }
+    }
+
+    .search-submit {
+        padding: 0 30px;
+        border: none;
+        background-color: $primary;
+        color: $purewhite;
+
+        &:hover {
+            background-color: lighten($primary, 10%);
+        }
+
+        &:active {
+            background-color: darken($primary, 10%);
+        }
+    }
+}
+
+.search-box {
+    
+    .search-form {
+
+        .search-textbox {
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+    }
+}
+
+.sidebar-column .widget.widget_search {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+
+}
