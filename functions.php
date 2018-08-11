@@ -269,6 +269,18 @@ if( function_exists('acf_add_options_page') ) {
 		'position'		=> '60'
 	));
 
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Front Page Options',
+		'menu_title'	=> 'Front Page',
+		'parent_slug'	=> 'site-options',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer Options',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'site-options',
+	));
+
 	acf_add_options_page(array(
 		'page_title' 	=> 'Featured',
 		'menu_title'	=> 'Featured',

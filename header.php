@@ -29,6 +29,8 @@
 	if (is_front_page()) $headerClasses .= ' front-page hit-top';
 	if (is_home()) $headerClasses .= ' blog';
 	if (!is_front_page()) $headerClasses .= ' not-front-page';
+
+	$inquireLink = '#';
 	?>
 
 	<div id="top"></div>
@@ -47,6 +49,11 @@
 					<div class="hspacer cell auto hide-for-large"></div>
 
 					<div class="menu-container cell large-auto">
+
+						<div class="mobile-inquire-button-container">
+							<a href="<?php echo $inquireLink; ?>" class="btn secondary">Inquire Now!</a>
+						</div>
+						
 						<?php
 						// Call header nav menu items up to 3 depth
 						wp_nav_menu( array(
@@ -60,7 +67,7 @@
 					</div>
 
 					<div class="inquire-button-container cell shrink show-for-medium">
-						<a href="#" class="btn cta">Inquire Now!</a>
+						<a href="<?php echo $inquireLink; ?>" class="btn cta">Inquire Now!</a>
 					</div>
 
 					<div class="hamburger-menu-container hide-for-large cell shrink">

@@ -32,6 +32,24 @@
         // letter-spacing: 0.05em;
         // text-transform: uppercase;
     }
+
+    .contact-container {
+        @include breakpoint(small only) {
+            margin: 10px 0 30px;
+            font-size: 0.9em;
+        }
+
+        .detail {
+            margin: 5px 0;
+
+            .fas {
+                font-size: 1.6em;
+                margin-right: 20px;
+            }
+            
+
+        }
+    }
 }
 
 #footer-menu {
@@ -74,4 +92,9 @@
             order: 2;
         }
     }
+}
+
+.contact-us-footer-section {
+    background-color: $lightgray;
+    padding: 40px 0;
 }

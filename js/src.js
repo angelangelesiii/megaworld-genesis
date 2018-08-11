@@ -81,6 +81,7 @@ jQuery(document).ready(function($){ // Document Ready
 
         $('.dimmer').addClass('dim');
         $('body').addClass('lockdown');
+        $('#main-mobile-button').addClass('menu-opened');
     }
 
     function menuClose(){
@@ -92,6 +93,7 @@ jQuery(document).ready(function($){ // Document Ready
 
         $('.dimmer').removeClass('dim');
         $('body').removeClass('lockdown');
+        $('#main-mobile-button').removeClass('menu-opened');
     }
     
     mobileButton.on('click', function(){
@@ -176,7 +178,7 @@ jQuery(document).ready(function($){ // Document Ready
     $('.properties-grid').isotope({
         itemSelector: '.grid-item',
         percentPosition: 'true',
-        stagger: 150,
+        stagger: 0,
         masonry: {
             columnWidth: '.grid-sizer',
         },

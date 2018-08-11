@@ -13,6 +13,7 @@
 
 	</div><!-- #content -->
 
+
 	<footer id="main-footer" class="site-footer">
 		<div class="footer-main-row wrapper-medium grid-x">
 
@@ -38,7 +39,23 @@
 			</div>
 
 			<div class="contact-container cell small-12 medium-4">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate vero nulla at quibusdam illum. Fugiat!</p>
+				<div class="contact-details">
+				<?php 
+				$footer = get_field('main_footer','options');
+				
+				if($footer['email']):
+				?>
+					<p class="detail"><i class="fas fa-envelope"></i><span class="var"><?php echo $footer['email']; ?></span></p>
+				<?php endif; ?>
+
+				<?php if($footer['phone_1']): ?>
+					<p class="detail"><i class="fas fa-phone"></i><span class="var"><?php echo $footer['phone_1']; ?></span></p>
+				<?php endif; ?>
+
+				<?php if($footer['phone_2']): ?>
+					<p class="detail"><i class="fas fa-phone"></i><span class="var"><?php echo $footer['phone_2']; ?></span></p>
+				<?php endif; ?>
+				</div>
 			</div>
 
 		</div>
