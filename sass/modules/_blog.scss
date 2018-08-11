@@ -1,6 +1,9 @@
 
 .page-header {
     padding: 0 0 40px;
+    @include breakpoint(small only) {
+        padding: 0 0 25px;
+    }
     
     .page-title {
         font-size: 3.5em;
@@ -12,7 +15,10 @@
             width: 66.6%;
             max-width: 750px;
             background-color: $lightgray;
-            margin: 30px auto 0;
+            margin: 20px auto 0;
+        }
+        @include breakpoint (small only) {
+            font-size: 2.8em;
         }
     }
 }
@@ -28,6 +34,9 @@
 .search-page {
     background-color: shade($purewhite, 5%);
     padding: 40px 0;
+    @include breakpoint(small only) {
+        padding: 25px 0;
+    }
 
     .main-column,
     .sidebar-column {

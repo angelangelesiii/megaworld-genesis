@@ -1,5 +1,8 @@
 
 .sidebar-column {
+    @include breakpoint(small only) {
+        margin-top: 25px;
+    }
 
     .widget {
         @include cardStyle();

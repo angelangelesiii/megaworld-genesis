@@ -50,3 +50,28 @@
         }
     }
 }
+
+#main-footer {
+
+    @include breakpoint(small only) {
+        text-align: center;
+
+        .info-column {
+            order: 3;
+            
+            .footer-logo {
+                margin: 0 auto 20px;
+            }
+        }
+        .footer-menu-container {
+            order: 1;
+
+            ul {
+                margin: 0 0 20px;
+            }
+        }
+        .contact-container {
+            order: 2;
+        }
+    }
+}
