@@ -197,6 +197,10 @@
     .article.single {
         @include cardStyle();
         padding: 80px 80px;
+        @include breakpoint(small only) {
+            padding: 40px 30px;
+            font-size: 0.85em;
+        }
 
         .post-thumb {
             max-width: 100%;
