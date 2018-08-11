@@ -368,7 +368,7 @@ ul#menu-header-menu {
         ul#menu-header-menu {
             width: 100%;
             background-color: $purewhite;
-            padding: 0;
+            padding: 20px 0;
             position: relative;
             border-bottom: #000 1px solid;
 
@@ -389,10 +389,22 @@ ul#menu-header-menu {
                 text-align-last: left;
                 position: relative;
                 z-index: 3;
+                &.menu-item-has-children a::after {
+                    line-height: normal;
+                }
+
+                &:hover a {
+                    background-color: $purewhite;
+                }
 
                 > a {
                     color: $primary !important;
-
+                    font-size: 1.1em;
+                    font-weight: 700;
+                    letter-spacing: 0;
+                    line-height: normal;
+                    height: auto;
+                    padding: 15px 30px;
                     &::before {
                         display: none;
                     }
@@ -408,8 +420,38 @@ ul#menu-header-menu {
                         display: none;
                     }
 
-                    a {
-                        color: $primary;
+                    > li {
+
+                        &.menu-item-has-children {
+
+                            &:hover a {
+                                background-color: $purewhite;
+                            }
+
+                            > a::after {
+                                position: static;
+                                display: inline-block;
+                                content: '\f0d7';
+                                margin-left: 15px;
+                            }
+                        }
+
+                        a {
+                            color: $primary;
+                            padding: 15px 0 15px 40px;
+                            font-size: 1em;
+                        }
+                    }  
+
+                    .sub-menu {
+
+                        li {
+
+                            a {
+                                padding: 13px 0 14px 60px;
+                                font-size: 0.9em;
+                            }
+                        }
                     }
                 }
             }
