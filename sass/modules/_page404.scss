@@ -1,0 +1,44 @@
+
+.section-404 {
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    background-image: url('../images/lightbg.jpg');
+    background-position: center center;
+    background-size: cover;
+
+    .contents {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        z-index: 3;
+        transform: translateY(-50%);
+        padding-bottom: 60px;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-bottom: 30px;
+    }
+
+    .head-404 {
+        color: $primary;
+        font-family: $my-sans-serif;
+        font-size: 9rem;
+        font-weight: 900;
+        line-height: 1em;
+        margin: 0;
+
+        .smaller {
+            font-size: 4rem;
+            letter-spacing: 0;
+        }
+    }
+
+    .subtext {
+        color: lighten($font, 10%);
+        margin: 30px;
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+}
