@@ -28,9 +28,12 @@
 	$headerClasses = get_post_type( $post->ID );
 	if (is_front_page()) $headerClasses .= ' front-page hit-top';
 	if (is_home()) $headerClasses .= ' blog';
-	if (!is_front_page()) $headerClasses .= ' not-front-page';
+	if (!is_front_page() && !get_field('page_bleed')) $headerClasses .= ' not-front-page';
+	if (get_field('page_bleed')) $headerClasses .= ' front-page bleed hit-top';
 
 	$inquireLink = '#';
+	if (get_field('contact_us_page_url', 'options')) $inquireLink = get_field('contact_us_page_url', 'options');
+
 	?>
 
 	<div id="top"></div>

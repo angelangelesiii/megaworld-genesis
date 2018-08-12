@@ -62,8 +62,8 @@ a:hover {
     width: 1px;
 }
 
-
 @import "modules/buttons";
+@import "modules/forms";
 @import "modules/header";
 @import "modules/footer";
 @import "modules/blog";
@@ -71,4 +71,4 @@ a:hover {
 @import "modules/isogrid";
 @import "modules/properties";
 @import "modules/sidebar";
-
+@import "modules/page404";

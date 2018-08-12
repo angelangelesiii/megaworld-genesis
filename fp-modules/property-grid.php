@@ -3,7 +3,7 @@
 $propertiesQuery = new WP_Query(array(
     'post_type' 			=> 'property',
     'posts_per_page' 		=> 4,
-    'orderby'				=> 'title',
+    'orderby'				=> 'rand',
     'order'					=> 'ASC'
 ));
 

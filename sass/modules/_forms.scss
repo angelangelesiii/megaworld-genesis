@@ -1,0 +1,73 @@
+
+article,
+.elementor {
+
+    form {
+        color: $font;
+
+        input[type=date],
+        input[type=datetime],
+        input[type=datetime-local],
+        input[type=email],
+        input[type=month],
+        input[type=number],
+        input[type=password],
+        input[type=range],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=time],
+        input[type=url],
+        input[type=week], {
+            padding: 11px 17px;
+            font-family: $my-sans-serif;
+            color: $font;
+            box-shadow: none;
+            background-color: $purewhite;
+            border: 1px solid $lightgray;
+
+        }
+
+        textarea {
+            padding: 8px 17px;
+            font-family: $my-sans-serif;
+            color: $font;
+            box-shadow: none;
+            background-color: $purewhite;
+            border: 1px solid $lightgray;
+        }
+
+        input,
+        textarea,
+        select {
+
+            &:focus {
+                outline: 1px solid $secondary;
+            }
+        }
+
+        label {
+            color: $font;
+            font-family: $my-sans-serif;
+        }
+
+        button,
+        input[type='submit'] {
+            padding: 13px 25px;
+            color: #FFF;
+            text-shadow: none;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.9em;
+            display: inline-block;
+            font-family: $my-sans-serif;
+            background-color: $secondary;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: lighten($secondary, 10%);
+            }
+        }
+    }
+}
