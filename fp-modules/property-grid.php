@@ -18,7 +18,7 @@ if ($propertiesQuery -> have_posts()):
             <h2 class="section-title">
                 Properties
             </h2>
-            <div class="subtext">All at your fingertips</div>
+            <div class="subtext">All the finest in the country</div>
         </header>
 
         <div class="iso-grid properties-grid">

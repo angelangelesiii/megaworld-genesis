@@ -22,7 +22,7 @@ get_header();
 			
 			// Templates
 			get_template_part( 'fp-modules/featured' ); 
-			get_template_part( 'fp-modules/genesis' ); 
+			 
 			// get_template_part( 'fp-modules/intro' ); 
 			
 			?>
@@ -35,6 +35,7 @@ get_header();
 
 			<?php 
 			get_template_part( 'fp-modules/property-grid' ); 
+			get_template_part( 'fp-modules/genesis' );
 			?>
 			
 		</main><!-- #main -->

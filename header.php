@@ -14,6 +14,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="google-site-verification" content="-rdSiJEPGrJyILixsE9SUrPLbd4M5gKNlPj0dfxPLMo" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#1674c1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -54,7 +55,7 @@
 					<div class="menu-container cell large-auto">
 
 						<div class="mobile-inquire-button-container">
-							<a href="<?php echo $inquireLink; ?>" class="btn secondary">Inquire Now!</a>
+							<a href="<?php echo $inquireLink; ?>" class="btn secondary">Contact Us</a>
 						</div>
 						
 						<?php
@@ -70,7 +71,7 @@
 					</div>
 
 					<div class="inquire-button-container cell shrink show-for-medium">
-						<a href="<?php echo $inquireLink; ?>" class="btn cta">Inquire Now!</a>
+						<a href="<?php echo $inquireLink; ?>" class="btn cta">Contact Us</a>
 					</div>
 
 					<div class="hamburger-menu-container hide-for-large cell shrink">

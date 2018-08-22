@@ -121,6 +121,10 @@
             }
             @include breakpoint(small only) {
                 padding: 0 15px 100px;
+                font-size: 0.65em;
+            }
+            @include breakpoint(small-medium only) {
+                padding: 0 15px 100px;
                 font-size: 0.8em;
             }
 
@@ -236,8 +240,11 @@
             @include breakpoint(medium only) {
                 font-size: 2.5em;
             }
+            @include breakpoint(small-medium only) {
+                font-size: 2em;
+            }
             @include breakpoint(small only) {
-                font-size: 2.1em;
+                font-size: 1.6em;
             }
         }
 
@@ -251,7 +258,11 @@
                 line-height: 2em;
             }
             @include breakpoint(small only) {
-                font-size: 0.9em;
+                font-size: 0.75em;
+                line-height: 1.5em;
+            }
+            @include breakpoint(small-medium only) {
+                font-size: 0.85em;
                 line-height: 1.5em;
             }
         }
