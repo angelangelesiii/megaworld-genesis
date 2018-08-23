@@ -14,6 +14,30 @@
 	</div><!-- #content -->
 
 
+	<?php if(!is_front_page() && !is_page('contact-us')): 
+		if(get_field('footer_contact_toggle', 'options')):?>
+	<section class="footer-contact-form">
+		<div class="wrapper-small">
+			<div class="message">
+				<?php if(get_field('footer_contact_message', 'options')): 
+					the_field('footer_contact_message', 'options');
+				else:
+				?>
+
+					<h2>Contact Us</h2>
+
+				<?php endif; ?>
+				
+			</div>
+			<div class="form-container">
+				<?php if(get_field('footer_contact_shortcode', 'options')) echo do_shortcode(get_field('footer_contact_shortcode', 'options')); ?>
+			</div>
+		</div>
+	</section>
+	<?php endif; 
+	endif; ?>
+
+
 	<footer id="main-footer" class="site-footer">
 		<div class="footer-main-row wrapper-medium grid-x">
 

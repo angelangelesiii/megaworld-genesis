@@ -99,3 +99,13 @@
     background-color: $lightgray;
     padding: 40px 0;
 }
+
+.footer-contact-form {
+    padding: 40px 0;
+    background-color: tint($lightgray, 70%);
+    text-align: center;
+
+    .message {
+        margin-bottom: 35px;
+    }
+}
